@@ -26,9 +26,9 @@ jobs:
           # Check for reactions in addition to comments/edits
           exempt-no-reactions: true
           # Idle days before marking "Waiting for response" as stale
-          days-before-issue-stale: 14  # Changed to 14 days
+          days-before-issue-stale: 1  # Changed to 1 day///14 days
           # Idle days before closing stale issue (after "stale" label)
-          days-before-issue-close: 5  # Changed to 5 days
+          days-before-issue-close: 2  # Changed to 2 days
           # Label to apply on staled issues
           stale-issue-label: "stale"
           # Close reason (not strictly necessary)
