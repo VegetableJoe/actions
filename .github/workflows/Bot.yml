@@ -21,10 +21,19 @@ jobs:
           ascending: true
 
           # ISSUES
+          # Do not auto-close an issue if it is assigned to a milestone
+          exempt-all-issue-milestones: true
+          # Exempt all issues with assignees from stale
+          exempt-all-issue-assignees: true
+          
           # Only target issues with "Waiting for response" label
-          issue-label: "Waiting for response"
-          # Check for reactions in addition to comments/edits
-          exempt-no-reactions: true
+          only-labels: "Waiting for response"
+          
+          # Check for reactions in addition to comments/edits - Doesnot work
+          # exempt-no-reactions: true
+          
+          #Remove stale label from issues on updates/comments
+          remove-stale-when-updated : true
           # Idle days before marking "Waiting for response" as stale
           days-before-issue-stale: 1  # Changed to 1 day///14 days
           # Idle days before closing stale issue (after "stale" label)
