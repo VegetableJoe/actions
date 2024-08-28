@@ -1,6 +1,7 @@
 name: Bot
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"  # Runs daily at midnight (UTC)
 
@@ -13,6 +14,8 @@ jobs:
     steps:
       - uses: actions/stale@v9
         with:
+          debug-only: true
+          enable-statistics: true
           # PAT for GitHub API authentication
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           # Max number of operations per run
